@@ -1,12 +1,12 @@
 # Image-Editor
-/Pirleci Noela-Elena, grupa 315CA
+Pirleci Noela-Elena, grupa 315CA
 
-	Pentru a implementa editorul foto aferent temei 3, am decis 
+Pentru a implementa editorul foto aferent temei 3, am decis 
 sa folosesc cate o functie distincta pentru fiecare comanda ce 
 ar putea fi introdusa de la tastatura. Asadar, voi incepe sa 
 prezint functinalitatea programului image_editor.c.
 
-	In functia "main" am declarat o variabila de tip struct 
+In functia "main" am declarat o variabila de tip struct 
 ("pic"), iar in structura am retinut antetul unei 
 poze si matricea de pixeli corespunzatoare acesteia. De asemenea
 am retinut aici si variabilele "x1", "x2", "y1", "y2", care imi
@@ -16,7 +16,7 @@ repetitve de forma "do...while" am inceput sa citesc rand pe
 rand cate o comanda, introdusa de la tastatura. Cu ajutorul 
 functiei "strcmp", verific ce comanda este introdusa.
 
-	Daca este introdusa comanda "LOAD", atunci, mai intai,
+Daca este introdusa comanda "LOAD", atunci, mai intai,
 verific daca exista deja sau nu o imagine incarcata in
 memorie. Daca exista, o voi inlatura. Imediat dupa, citesc 
 numele unui fisier, urmand sa il deschid si, bineinteles, sa
@@ -34,7 +34,7 @@ variabila "loaded", in care retin daca exista o imagine deja
 incarcata in memorie si afisez un mesaj corespunzator 
 ("Loaded image").
 
-	Daca este comanda "SAVE", verific, din nou, daca exista
+Daca este comanda "SAVE", verific, din nou, daca exista
 o imagine deja incarcata in memorie. Daca nu afisez un mesaj
 ("No image loaded"), altfel, citesc cu "fgets" sirul de dupa 
 comanda. Folosesc functia "strtok" pentru a trunchia elementele
@@ -64,7 +64,7 @@ auxiliare.
 ascii sau binar, afisez un mesaj corespunzator ("Saved 
 nume_fisier").
 
-	Daca este comanda "SELECT", verific, ca de fiecare data daca
+Daca este comanda "SELECT", verific, ca de fiecare data daca
 exista vreun fisier deja incarcat in memorie si daca nu este 
 afisez un mesaj corespunzator. Initializez variabilele "x1", 
 "x2", "y1", "y2" in care retin extremele imaginii. Daca este 
@@ -83,7 +83,7 @@ si voi afisa mesajul "Selected x1, y1, x2, y2".
 "x_i", "y_i", "x_f", "y_f" dimensiunile imaginii incarcate in 
 memorie, iar apoi voi afisa mesajul "Selected ALL".
 
-	Daca este comanda "HISTOGRAM", verific din nou daca este 
+Daca este comanda "HISTOGRAM", verific din nou daca este 
 deja un fisier incarcat in memorie. Daca este, citesc cu "fgets"
 ce urmeaza dupa comanda. Daca dupa "HISTOGRAM" nu intalneste 
 niciun caracter, voi afisa mesajul "Invalid command". Altfel, 
@@ -107,7 +107,7 @@ histograma imaginii.
 	Daca este incarcata o imagine P5 in memorie, pasii vor fi 
 aceiasi, doar ca pixelii binari vor fi convertiti in ascii.
 
-	Daca este comanda "EQUALIZE", voi verifica din nou daca 
+Daca este comanda "EQUALIZE", voi verifica din nou daca 
 este incarcata vreo imagine in memorie. Daca nu, afisez mesaj 
 corespunzator, altfel apelez functia "equalize_image".
 	In functia "equalize_image" initializez 2 vectori de 
@@ -125,7 +125,7 @@ putea calcula frecventa fiecarui pixel si, de asemenea, voi
 converti si valoarea noua in format binar. La final, indiferent
 de tipul imaginii, voi afisa mesajul "Equalize done".
 
-	Daca este comanda "CROP", voi verifica mai intai daca 
+Daca este comanda "CROP", voi verifica mai intai daca 
 este incarcata vreo imagine in memorie. Daca nu, afisez un 
 mesaj corespunzator, daca da, apelez functia "crop_image".
 	In functia "crop_image" voi intializa variabilele "rows", 
@@ -141,7 +141,7 @@ in cea initializata anterior. Dupa aceea, voi elibera si
 matricea ajutatoare. Dupa toate aceste operatii, reatribui 
 dimensiunilor imaginii noile dimesiuni dupa operatie.
 
-	Daca este comanda "APPLY", voi verifica mai intai daca e
+Daca este comanda "APPLY", voi verifica mai intai daca e
 incarcata in memorie vreo imagine. Daca nu, afisez un mesaj.
 Altfel, citesc cu "fgets" sirul de dupa comanda, iar cu 
 ajutorul functiei "strtok" il trunchiez. Daca dupa comanda nu 
@@ -170,7 +170,7 @@ functia "main", voi afisa un mesaj corspunzator. De asemenea,
 daca parametrul introdus dupa comanda nu este unul valid, 
 voi afisa mesajul "APPLY parameter inavlid".
 
-	Structura "do...while" se va opri atunci cand va intalni 
+Structura "do...while" se va opri atunci cand va intalni 
 comanda "EXIT". Daca exista o imagine incarcata in memorie, 
 atunci va fi apelata functia "exit_program". Daca nu este 
 incarcata nicio imagine, voi afisa un mesaj.
